@@ -1,0 +1,110 @@
+Steps:- 
+
+1. First to start the practical you need 2 LEDs, 2 resistors, and 3 jumper wires.
+2. Now connect two LEDs to the breadboard
+3. Next connect the 2 resistors, one end to the negative end of 
+the LEDs on the breadboard and the second end to the endpoint of the breadboard. 
+4. Connect 2 Jumper Wires to the Positive end of the LEDs. 
+5. For the Ground Connection add the third Jumper Wire to the bottom of the breadboard to connect all 
+the resistors. 
+6. Turn on your mobile phone and install telegram.
+7. Create a bot with the help of botfather
+ Commands to create a bot : 
+a. Go to telegram and search and open botfather 
+i. Type the commands: 
+ii. /Start
+iii. /newbot 
+
+8. Once the bot father is created a bot it will generate a unique id the unique id needs to be added into the code. 
+
+9. Open the bot with the name which you have created 
+
+ Give the start command to turn on the bot. 
+
+ Now you can give commands to blink the led's or to create 
+a pattern
+
+CODE:-import datetime 
+
+import telepot 
+
+from telepot.loop import MessageLoop 
+
+import RPi.GPIO as GPIO 
+
+from time import sleep 
+
+red_led_pin = 21 
+
+green_led_pin = 20 
+
+GPIO.setmode(GPIO.BCM) 
+
+GPIO.setup(red_led_pin, GPIO.OUT) 
+
+GPIO.setup(green_led_pin, GPIO.OUT) 
+
+now = datetime.datetime.now() 
+
+def handle(msg): 
+
+ chat_id = msg['chat']['id'] 
+
+ command = msg['text'] 
+
+ print ('Received:') 
+
+ print(command) 
+
+ if command == '/hi': 
+
+ bot.sendMessage (chat_id, str("Hi! ")) 
+
+ elif command == '/r1': 
+
+ bot.sendMessage(chat_id, str("Red 
+
+led is ON")) 
+
+GPIO.output(red_led_pin, True) 
+
+ elif command == '/r0': 
+
+ bot.sendMessage(chat_id, str("Red 
+
+led is OFF"))
+GPIO.output(red_led_pin, False)
+
+ elif command == '/g1': 
+
+ bot.sendMessage(chat_id, 
+
+ str("Green led is ON")) 
+
+ GPIO.output(green_led_pin, True) 
+
+ elif command == '/g0': 
+
+ bot.sendMessage(chat_id, 
+
+ str("Green led is OFF")) 
+
+ GPIO.output(green_led_pin, False) 
+
+bot = 
+
+telepot.Bot('6558187738:AAHvdvVes5nf
+
+G2RyLWgm7zZrzTU87DzqYiY') 
+
+print (bot.getMe()) 
+
+MessageLoop(bot, 
+
+handle).run_as_thread() 
+
+print ('Listening....') 
+
+while 1: 
+
+ sleep(10)
