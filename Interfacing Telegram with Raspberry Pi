@@ -24,6 +24,18 @@ iii. /newbot
  Now you can give commands to blink the led's or to create 
 a pattern
 
+
+
+
+
+Terminal Command:- 
+
+sudo pip3 install telepot
+
+
+
+
+
 CODE:-import datetime 
 
 import telepot 
