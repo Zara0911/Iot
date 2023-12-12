@@ -1,0 +1,35 @@
+Steps:- 
+
+1. Open the web browser and go to the link: 
+https://github.com/timwaizenegger/raspberrypiexamples/tree/master/actor-led-7segment-4numbers 
+
+2. Click on the actor–>led-7segment-4numbers.zip folder and download the zip file. 
+
+3. Go to the File Manager→ Downloads→ unzip the actor led-7 segment- 4 numbers.zip file → documents folder →python projects. 
+
+4. Make the connections as follows: 
+
+a. Connect Pin2 (5V) of RPI to VCC PIN of 7 segment module. 
+
+b. Connect Pin6 (Ground) of RPI to Ground pin of 7 Segment Module. 
+
+c. Connect Pin 38 of RPI to DIO pin of 7 Segment Module. 
+
+d. Connect Pin 40 of RPI to CLK of the 7 Segment Module. 
+
+5. Go to location where you have downloaded seven segment file, copy the location of that file. 
+
+6. Open the terminal and paste your location as “cd location”. 
+
+7. After entering location we have to give the command to run seven 
+segment as “sudo python clock.py” 
+
+Terminal Commands:- 
+
+cd (file location) 
+
+sudo python clock.py
+
+
+
+CODE:-nahi hai
