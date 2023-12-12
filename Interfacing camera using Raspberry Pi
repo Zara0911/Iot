@@ -1,0 +1,54 @@
+Connect Pi Camera to CSI interface of Raspberry Pi board 
+2. Now, we can use Pi Camera for capturing images and videos using Raspberry Pi.
+3. Now turn on your Raspberry pi. 
+4. Before using Pi Camera, we need to enable camera for its working
+5. For enabling camera in Raspberry Pi, open raspberry pi configuration using following command :
+Terminal Command:-  Sudo raspi-config
+Then go to interface option, click on camera and enable it.
+Code:-
+Video1.py 
+
+import time 
+
+from picamera import 
+
+PiCamera 
+
+camera=PiCamera() 
+
+camera.start_preview() 
+
+camera.start_recording('home
+
+/pi/Desktop/video1.h264') 
+
+camera.wait_recording(5) 
+
+camera.stop_recording() 
+
+print("finished Recording")
+
+
+picam.py 
+
+import time 
+
+from picamera import 
+
+PiCamera 
+
+camera=PiCamera() 
+
+camera.resolution=(1280,7
+
+20) 
+
+camera.start_preview() 
+
+time.sleep(5) 
+
+camera.capture('home/pi/D
+
+esktop/ty2.jpg') 
+
+camera.stop_preview()
