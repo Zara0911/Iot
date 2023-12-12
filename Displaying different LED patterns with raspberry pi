@@ -1,1 +1,21 @@
+STEPS :-
 
+1) Connect the LED to the breadboard.
+
+2) LED had 2 terminals (One is the longer terminal that is positive, second is the shorter terminal that is negative).
+
+3) Connect one side for the jumper wire below the LED positive side on the breadboard connect the jumper wire below the LED longer terminal.
+
+4) Connect one end of the resistor on the breadboard right below the LED negative side.
+
+5) The other end of the resistor connects it anywhere on the
+
+   breadboard. Now connect another jumper wire right above the second end of the resistor.
+
+6) Connect the positive side of the jumper wire on PIN 7, 29,
+
+   31, 33 and the negative side on PIN 9 of the raspberry pi
+
+i. Longer terminal = Positive (Raspberry Pi Pin7)
+
+ii. Shorter terminal = Negative (Raspberry Pi Pin 9)
